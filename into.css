@@ -1,76 +1,86 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #8B0000; /* fallback in case image fails */
+    background-image: url('ga.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Main Wrapper */
 #main {
     font-family: sans-serif;
-} 
+}
 
 #About {
     margin: 8px;
 }
 
-.menu { 
+/* Navbar */
+.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-} 
-
-.menu li {
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.active {
-    background-color: rgb(172, 33, 28);
+.menu li {
+    float: none;
 }
 
 .menu li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
 }
 
-body {
-    background-image: url('ga.png'); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.menu li a:hover,
+.active {
+    background-color: rgb(172, 33, 28);
 }
 
-p {
-    color: rgba(255, 255, 0, 0.671);
-    font-size: clamp(16px, 4vw, 25px);
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    padding: 0 10px;
-}
-
+/* Hero Section */
 .hero h1 {
     color: gold;
     font-family: Stencil;
     text-align: center;
-    font-size: clamp(30px, 8vw, 80px);
-    margin: 0 10px;
+    font-size: 60px;
+    margin: 20px;
 }
 
+/* Sub Headings */
 .mission h2,
 .story h2,
 .call-to-action h2 {
     color: gold;
+    font-size: 40px;
     text-align: center;
-    font-size: clamp(24px, 6vw, 60px);
-    margin: 0 10px;
+    margin: 20px 10px;
 }
 
+/* Paragraphs */
+p {
+    color: rgba(255, 255, 0, 0.9);
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+/* Footer */
 .footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-}
-
-.footer.container {
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 .footer h4 {
@@ -96,23 +106,7 @@ p {
     color: #ccc;
 }
 
-.footer.copyright {
+.footer .copyright {
     font-size: 14px;
     margin-top: 20px;
-}
-
-/* Responsive tweaks for portrait mode */
-@media (max-width: 600px) {
-    .menu li {
-        float: none;
-        text-align: center;
-    }
-
-    .menu li a {
-        padding: 10px;
-    }
-
-    body {
-        background-size: cover;
-    }
 }
