@@ -3,102 +3,116 @@
 } 
 
 #About {
-margin: 8px;
-}
-.menu { 
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: #333;
-} 
-.menu li {
-float: left;
+    margin: 8px;
 }
 
-.active{
-background-color: rgb(172, 33, 28);
+.menu { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+} 
+
+.menu li {
+    float: left;
+}
+
+.active {
+    background-color: rgb(172, 33, 28);
 }
 
 .menu li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
- 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-body{
-  
-        
-        background-image: url('ga.png'); 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 122%;
-        
+
+body {
+    background-image: url('ga.png'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-p{
-color: rgba(255, 255, 0, 0.671);
-font-size: 25px;
-font-family: 'Times New Roman', Times, serif;
+
+p {
+    color: rgba(255, 255, 0, 0.671);
+    font-size: clamp(16px, 4vw, 25px);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 0 10px;
 }
-.hero h1{
+
+.hero h1 {
     color: gold;
     font-family: Stencil;
     text-align: center;
-    font-size: 80px;
+    font-size: clamp(30px, 8vw, 80px);
+    margin: 0 10px;
 }
-.mission h2{
-color: rgb(250, 213, 4);
-font-size: 60px;
-text-align: center;
-}
-.story h2{
+
+.mission h2,
+.story h2,
+.call-to-action h2 {
     color: gold;
     text-align: center;
-    font-size: 60px;
-}
-.call-to-action h2{
-    color: gold;
-    text-align: center;
-    font-size: 60px;
+    font-size: clamp(24px, 6vw, 60px);
+    margin: 0 10px;
 }
 
 .footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-  }
-  
-  .footer.container {
+}
+
+.footer.container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer h4 {
+}
+
+.footer h4 {
     margin-top: 0;
-  }
-  
-  .footer ul {
+}
+
+.footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .footer li {
+}
+
+.footer li {
     margin-bottom: 10px;
-  }
-  
-  .footer a {
+}
+
+.footer a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .footer a:hover {
+}
+
+.footer a:hover {
     color: #ccc;
-  }
-  
-  .footer.copyright {
+}
+
+.footer.copyright {
     font-size: 14px;
     margin-top: 20px;
-  }
+}
+
+/* Responsive tweaks for portrait mode */
+@media (max-width: 600px) {
+    .menu li {
+        float: none;
+        text-align: center;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    body {
+        background-size: cover;
+    }
+}
